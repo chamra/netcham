@@ -9,7 +9,7 @@ function clickButton(selector) {
   // Selectors for Netflix buttons
   const skipButtonSelector = '.watch-video--skip-content-button';
   const nextEpisodeButtonSelector = 'button[data-uia="next-episode-seamless-button"]';
-  const continueWatchingButtonSelector = '.button-nfplayerPostPlayPlay';
+  const continueWatchingButtonSelector = 'button[data-uia="interrupt-autoplay-continue"]';
   
   // Function to click buttons
   function clickNetflixButtons() {
