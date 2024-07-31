@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "NetCHAM",
-    "version": "1.0",
+    "version": "1.0.1",
     "description": "Skip netflix and go to next episode",
     "permissions": [
         "activeTab",
