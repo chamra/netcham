@@ -1,18 +1,13 @@
 {
     "manifest_version": 2,
     "name": "NetCHAM",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Skip netflix and go to next episode",
     "permissions": [
         "activeTab",
         "webNavigation",
         "tabs"
     ],
-    "background": {
-        "scripts": [
-            "background.js"
-        ]
-    },
     "content_scripts": [
         {
             "matches": [
