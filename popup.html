@@ -1,14 +1,65 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Add-on</title>
+    <title>NetCham</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
-    <h1>NetCham</h1>
-    please support
+    <div class="popup-container">
+      
+
+      <div class="status-card">
+        <div class="status-row">
+          <span>Elapsed</span>
+          <span id="elapsed-time">--:--</span>
+        </div>
+        <div class="status-row">
+          <span>Duration</span>
+          <span id="duration-time">--:--</span>
+        </div>
+        <div class="status-row">
+          <span>Status</span>
+          <span id="playback-status">unknown</span>
+        </div>
+      </div>
+
+
+      <div class="seek-card">
+        <div class="seek-row">
+          <button id="rewind">Rewind</button>
+          <span><input id="rewind-seconds" type="number" min="1" value="5"> sec</span>
+        </div>
+        <div class="seek-row">
+          <button id="fast-forward">Fast Forward</button>
+          <span><input id="forward-seconds" type="number" min="1" value="5"> sec</span>
+        </div>
+      </div>
+
+      <div class="binding-card">
+        <div class="binding-title">Key bindings</div>
+        <div class="binding-grid">
+          <label for="key-next">Next episode</label>
+          <input id="key-next" type="text" maxlength="1" placeholder="N" />
+          <label for="key-subtitles">Subtitles</label>
+          <input id="key-subtitles" type="text" maxlength="1" placeholder="V" />
+          <label for="key-rewind">Rewind</label>
+          <input id="key-rewind" type="text" maxlength="1" placeholder="," />
+          <label for="key-forward">Forward</label>
+          <input id="key-forward" type="text" maxlength="1" placeholder="." />
+        </div>
+        <div class="save-row">
+          <button id="save-bindings" type="button">Save shortcuts</button>
+          <span id="save-notice" class="save-notice"></span>
+          <p class="hint-note">refresh the page after saving</p>
+          <div class="current-shortcuts" id="current-shortcuts" aria-live="polite"></div>
+        </div>        
+      </div>
+
+    </div>
+
+    <script src="./popup.js"></script>
   </body>
 </html>

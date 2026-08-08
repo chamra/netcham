@@ -1,4 +1,196 @@
-body{
-    font-family: "Roboto Slab", serif;
-    background-color: #e17979;
+:root {
+    color-scheme: dark;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #e2e8f0;
+    background: #070b14;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    min-width: 320px;
+}
+
+body {
+    background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 28%),
+                radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.16), transparent 30%),
+                #060b16;
+}
+
+.popup-container {
+    padding: 18px;
+}
+
+.header-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.app-label {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.app-subtitle {
+    margin: 4px 0 0;
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+.status-card,
+.seek-card,
+.hint-card {
+    background: rgba(15, 23, 42, 0.92);
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+    padding: 14px 16px;
+    margin-bottom: 14px;
+}
+
+.info-row,
+.seek-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.info-row:last-child,
+.seek-row:last-child {
+    margin-bottom: 0;
+}
+
+.info-row span,
+.info-row strong {
+    font-size: 0.92rem;
+}
+
+.info-row strong {
+    color: #f8fafc;
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+button {
+    border: none;
+    border-radius: 14px;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #f8fafc;
+    background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+    cursor: pointer;
+    transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 18px 35px rgba(14, 165, 233, 0.22);
+}
+
+input[type="number"],
+input[type="text"] {
+    border-radius: 12px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    background: rgba(15, 23, 42, 0.7);
+    color: #f8fafc;
+    padding: 10px 12px;
+    font-size: 0.92rem;
+    min-width: 52px;
+    outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.seek-input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.binding-card {
+    padding: 16px;
+}
+
+.binding-title {
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.binding-grid {
+    display: grid;
+    grid-template-columns: auto 64px;
+    row-gap: 10px;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.save-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.save-notice {
+    color: #38bdf8;
+    font-size: 0.85rem;
+    min-width: 60px;
+}
+
+.current-shortcuts {
+    margin-top: 10px;
+    color: #cbd5e1;
+    font-size: 0.88rem;
+}
+
+.debug-status {
+    margin-top: 10px;
+    color: #a5b4fc;
+    font-size: 0.84rem;
+    min-height: 20px;
+}
+
+.debug-status.error {
+    color: #fca5a5;
+}
+
+.binding-grid label {
+    color: #cbd5e1;
+    font-size: 0.86rem;
+}
+
+.binding-grid input {
+    width: 100%;
+}
+
+.hint-note {
+    margin: 12px 0 0;
+    color: #94a3b8;
+    font-size: 0.82rem;
+    line-height: 1.4;
+}
+
+button:focus,
+input:focus {
+    outline: 2px solid rgba(59, 130, 246, 0.55);
+    outline-offset: 2px;
 }
